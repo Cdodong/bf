@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+				color: #333;
+				background-color: #fff;
+				min-width: 1226px;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style-type: none;
+			}
+			
+			.topbar {
+				position: relative;
+				height: 40px;
+				font-size: 12px;
+				color: #b0b0b0;
+				background: #333;
+			}
+			
+			.top-con {
+				width: 1226px;
+				margin: 0 auto;
+			}
+			
+			.right-list {
+				float: left;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			.right-list a {
+				color: #b0b0b0;
+				line-height: 40px;
+				display: inline-block;
+			}
+			
+			.right-list span {
+				margin: auto 3px;
+				color: #424242;
+			}
+			
+			.right-list a span img {
+				width: 90px;
+				height: 90px;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			.right-list a span span {
+				display: block;
+				text-align: center;
+				font-size: 14px;
+				color: #333;
+				line-height: 1;
+				margin-top: 14px;
+			}
+			
+			.right-list a:hover {
+				color: white;
+			}
+			
+			.shop-car {
+				float: right;
+				width: 120px;
+				height: 40px;
+				background: white;
+				margin-left: 15px;
+			}
+			
+			.shop-car .buy-car {
+				display: block;
+				width: 120px;
+				height: 40px;
+				font-size: 12px;
+				color: #b0b0b0;
+				background: #424242;
+				text-decoration: none;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.shop-car .shop-car-list {
+				width: 316px;
+				position: absolute;
+				z-index: 31;
+				top: 40px;
+				right: 147px;
+				padding: 15px 0 0;
+				color: #424242;
+				background-color: white;
+				box-shadow: 0px 2px 10px rgba(0, 0, 0, .15);
+			}
+			
+			.shop-car .shop-car-list .div {
+				margin: 5px 20px 20px;
+				padding: 20px 0;
+				text-align: center;
+			}
+			
+			.shop-car .shop-car-list .shopcar-list {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			
+			.shop-car .shop-car-list .shopcar-list .shopcar-item {
+				height: 80px;
+				padding: 0 20px;
+				position: relative;
+			}
+			
+			.shop-car .shop-car-list .shopcar-list .shopcar-item .cart-item {
+				position: relative;
+				height: 60px;
+				padding: 10px 0;
+				line-height: 20px;
+			}
+			
+			.shopcar-list .shopcar-item .cart-item .cart-pic {
+				display: inline-block;
+				float: left;
+				margin-right: 10px;
+				line-height: 40px;
+				text-decoration: none;
+			}
+			
+			.shopcar-list .shopcar-item .cart-item .cart-pic .cart-img {
+				width: 60px;
+				height: 60px;
+			}
+			
+			.shopcar-list .shopcar-item .cart-item .cart-shopname {
+				display: inline-block;
+				width: 95px;
+				height: 40px;
+				line-height: 40px;
+				overflow: hidden;
+				text-decoration: none;
+				margin: 10px 0;
+				color: #424242;
+				float: left;
+			}
+			
+			.shopcar-list .shopcar-item .cart-item .cart-price {
+				float: right;
+				margin: 10px 20px 0 5px;
+			}
+			
+			.shopcar-list .shopcar-item .cart-item .cart-delete {
+				display: block;
+				text-decoration: none;
+				position: absolute;
+				top: 21px;
+				right: 0;
+				line-height: 40px;
+			}
+			
+			.shop-car-list .cart-all {
+				display: block;
+				width: 276px;
+				padding: 15px 20px;
+				background-color: #FAFAFA;
+			}
+			
+			.shop-car-list .cart-all .caart-text {
+				display: inline-block;
+				float: left;
+				width: 135px;
+				color: #757575;
+			}
+			
+			.shop-car-list .cart-all .caart-text .text-price {
+				display: block;
+				color: #FF6700;
+				font-weight: 400;
+			}
+			
+			.shop-car-list .cart-all .caart-text .text-price em {
+				font-size: 24px;
+				font-style: normal;
+			}
+			
+			.shop-car-list .cart-all .btn-suan {
+				display: inline-block;
+				width: 130px;
+				height: 38px;
+				float: right;
+				padding: 0;
+				line-height: 40px;
+				font-size: 14px;
+				background-color: #FF6700;
+				color: #F5F5F5;
+				text-decoration: none;
+				text-align: center;
+				margin: 0;
+			}
+			
+			.left-list {
+				position: relative;
+				float: right;
+				height: 40px;
+				line-height: 40px;
+			}
+			
+			.left-list a {
+				color: #b0b0b0;
+				line-height: 40px;
+				display: inline-block;
+			}
+			
+			.left-list span {
+				margin: auto 3px;
+				color: #424242;
+			}
+			
+			.left-list a:hover {
+				color: white;
+			}
+			
+			.clear {
+				clear: both;
+			}
+			
+			.top-sar {
+				position: relative;
+				height: 100px;
+			}
+			
+			.top-sar .container {
+				width: 1226px;
+				margin: 0 auto;
+			}
+			
+			.top-sar .container .logo {
+				float: left;
+				width: 62px;
+				margin-top: 22px;
+			}
+			
+			.top-sar .container .logo a {
+				position: relative;
+				display: block;
+				width: 55px;
+				height: 55px;
+				overflow: hidden;
+				background-image: url(img/logo.png);
+				background-size: 55px 55px;
+				text-align: left;
+			}
+			
+			.top-sar .container .hot {
+				float: left;
+				margin-left: 7px;
+			}
+			
+			.top-sar .container .hot a {
+				display: block;
+				width: 165px;
+				height: 100px;
+				background-image: url(img/de.gif);
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			
+			.top-sar .container .tar-list {
+				float: left;
+				width: 685px;
+				height: 100px;
+			}
+			
+			.top-sar .container .tar-list ul {
+				position: relative;
+				float: left;
+				width: 655px;
+				height: 88px;
+				margin: 0;
+				padding-top: 12px;
+				list-style-type: none;
+				font-size: 16px;
+			}
+			
+			.top-sar .container .tar-list ul .list-item {
+				float: left;
+			}
+			
+			.list-item a {
+				display: block;
+				padding: 26px 10px 38px;
+				color: #333333;
+				text-decoration: none;
+			}
+			
+			.list-item a:hover {
+				color: #ff6700;
+			}
+			
+			.top-sar .container .search-box {
+				float: right;
+				width: 296px;
+				margin-top: 25px;
+			}
+			
+			.top-sar .container .search-box .search-form {
+				position: relative;
+				width: 296px;
+				height: 50px;
+			}
+			
+			.search-form .search-txt {
+				box-sizing: content-box;
+				position: absolute;
+				top: 0;
+				right: 51px;
+				width: 223px;
+				height: 48px;
+				padding: 0 10px;
+				border: 1px solid #e0e0e0;
+				font-size: 14px;
+				line-height: 48px;
+			}
+			
+			.search-form .search-btn {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 52px;
+				height: 50px;
+				border: 1px solid #e0e0e0;
+				font-size: 24px;
+				line-height: 24px;
+				background: #fff;
+				color: #616161;
+			}
+			
+			.top-dis {
+				display: none;
+				height: 229px;
+				margin-top: 0px;
+				padding-top: 0px;
+				margin-bottom: 0px;
+				padding-bottom: 0px;
+				box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+				border-top: 1px solid rgb(224, 224, 224);
+			}
+			
+			.top-dis .dis-content {
+				position: relative;
+				width: 1226px;
+				margin: 0 auto;
+			}
+			
+			.top-dis .dis-content ul {
+				list-style-type: none;
+				font-size: 12px;
+			}
+			
+			.top-dis .dis-content ul li {
+				position: relative;
+				float: left;
+				width: 180px;
+				padding: 35px 12px 0px;
+				text-align: center;
+			}
+			
+			.top-dis .dis-content ul li:before {
+				position: absolute;
+				left: 0px;
+				top: 35px;
+				width: 1px;
+				height: 100px;
+				content: '';
+				background-color: #e0e0e0;
+			}
+			
+			.top-dis .dis-content ul .one:before {
+				background-color: white;
+			}
+			
+			.top-dis .dis-content ul li .pic {
+				width: 160px;
+				height: 110px;
+				margin: 0 auto 16px;
+				text-align: center;
+			}
+			
+			.top-dis .dis-content ul li .pic a img {
+				width: 160px;
+				height: 110px;
+			}
+			
+			.top-dis .dis-content ul li .title {
+				margin: 0;
+				line-height: 20px;
+				color: #333;
+				text-align: center;
+			}
+			
+			.dis-content ul li .title a {
+				color: #333;
+			}
+			
+			.dis-content ul li p {
+				margin: 0;
+				line-height: 20px;
+				color: #ff6700;
+			}
+			
+			.top-dis .dis-content ul li .new {
+				position: absolute;
+				top: -1px;
+				left: 0px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.top-dis .dis-content ul li .newfalse {
+				display: none;
+			}
+			
+			.top-dis .dis-content ul li .newtrue {
+				display: block;
+			}
+			
+			.top-dis .dis-content ul li .new div {
+				display: inline-block;
+				height: 18px;
+				padding: 1px 20px;
+				border: 1px solid #ff6700;
+				color: #ff6700;
+			}
+			
+			.mid-bar {
+				position: relative;
+				margin-top: 0px;
+				width: 100%;
+				height: 63px;
+				box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+				border-top: 1px solid #e0e0e0;
+				border-bottom: 1px solid #e0e0e0;
+				color: #616161;
+			}
+			
+			.mid-bar .mid-con {
+				width: 1224px;
+				margin: 0 auto;
+			}
+			
+			.mid-bar .mid-con h2 {
+				display: inline-block;
+				line-height: 60px;
+				margin: 0;
+				font-size: 18px;
+				font-weight: 400;
+				color: #212121;
+				float: left;
+			}
+			
+			.mid-bar .mid-con .mid-left {
+				float: left;
+				margin-left: 5px;
+				font-size: 12px;
+				margin-top: 21px;
+			}
+			
+			.mid-bar .mid-con .mid-left a {
+				color: #616161;
+				margin: 0 3px;
+				text-decoration: none;
+			}
+			
+			.mid-bar .mid-con .mid-right {
+				float: right;
+				margin: 17px 0 0;
+			}
+			
+			.mid-bar .mid-con .mid-right a {
+				color: #616161;
+				margin: 0 3px;
+				text-decoration: none;
+			}
+			
+			.mid-bar .mid-con a:hover {
+				color: #ff6700;
+			}
+			
+			.mid-bar .mid-con .mid-right span {
+				color: #e0e0e0;
+			}
+			
+			.main {
+				width: 100%;
+				margin: 0;
+				padding-bottom: 50px;
+			}
+			
+			.main .main-content {
+				padding: 32px 0 12px;
+				position: relative;
+				width: 1224px;
+				margin: 0 auto;
+			}
+			
+			.lunbuo-box {
+				position: relative;
+				float: left;
+				height: 600px;
+				width: 606px;
+				margin-left: 0;
+			}
+			
+			.lunbuo-box .img-list {
+				width: 606px;
+				height: 600px;
+				list-style: none;
+			}
+			
+			.lunbuo-box .img-list .img-item {
+				width: 606px;
+				height: 600px;
+				position: absolute;
+				background-size: 100%;
+				opacity: 0;
+			}
+			
+			.lunbuo-box .img-list .img-item.active {
+				opacity: 1;
+			}
+			
+			.btn {
+				margin-top: -35px;
+			}
+			
+			.btn.prev {
+				width: 41px;
+				height: 69px;
+				border: none;
+				font-size: 30px;
+				background-color: rgba(0, 0, 0, 0);
+				position: absolute;
+				top: 50%;
+				left: 0;
+				color: rgb(117, 117, 117);
+				cursor: pointer;
+			}
+			
+			.btn.next {
+				width: 41px;
+				height: 69px;
+				border: none;
+				font-size: 30px;
+				background-color: rgba(0, 0, 0, 0);
+				position: absolute;
+				top: 50%;
+				right: 0;
+				color: rgb(117, 117, 117);
+				cursor: pointer;
+			}
+			
+			.btn:hover {
+				background-color: rgba(75, 75, 75, 0.7);
+				color: white;
+			}
+			
+			.lunbuo-box .pointlist {
+				width: 100%;
+				position: absolute;
+				bottom: 10px;
+				left: 0;
+				text-align: center;
+			}
+			
+			.lunbuo-box .pointlist .pointbox {
+				display: inline-block;
+				box-sizing: border-box;
+				width: 50px;
+				height: 2px;
+				background: #ccc;
+				border-radius: 0;
+				border: 0;
+				margin: 0 5px;
+				transition: all .2s;
+			}
+			
+			.lunbuo-box .pointlist .pointbox:hover {
+				background: #757575;
+				cursor: pointer;
+			}
+			
+			.shop-box {
+				width: 606px;
+				float: right;
+				margin-left: 12px;
+				;
+			}
+			
+			.shop-box .shop-tit {
+				display: block;
+				line-height: 1;
+				margin: 0;
+				padding: 0;
+				font-size: 24px;
+				font-weight: normal;
+				color: #212121;
+			}
+			
+			.shop-box .shop-ppp {
+				color: #b0b0b0;
+				margin: 0;
+				padding: 0;
+				padding-top: 8px;
+			}
+			
+			.shop-main {}
+			
+			.shop-main .company {
+				margin-top: 14px;
+				margin-bottom: 0;
+				color: #ff6700;
+				display: block;
+			}
+			
+			.shop-main .shop-price {
+				display: block;
+				font-size: 18px;
+				line-height: 1;
+				color: #ff6700;
+				border-bottom: 1px solid #e0e0e0;
+				padding: 12px 0 20px;
+			}
+			
+			.shop-main .shop-adds {
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+			
+			.shop-adds .adds-con {
+				box-sizing: border-box;
+				background: #fafafa;
+				border: 1px solid #e0e0e0;
+				padding: 30px 40px 30px 50px;
+			}
+			
+			.shop-adds .adds-con .adds-itt {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				background-color: #757575;
+				border-radius: 50%;
+				margin-left: -15px;
+				position: relative;
+				top: -15px;
+			}
+			
+			.adds-ppp {
+				display: inline-block;
+			}
+			
+			.adds-ppp .adds-more {
+				display: inline-block;
+			}
+			
+			.adds-ppp .adds-more .adds-item {
+				margin-right: 14px;
+				color: #333;
+			}
+			
+			.adds-ppp .change {
+				display: inline-block;
+				color: #FF6700;
+			}
+			
+			.adds-ppp .shop-sale {
+				color: #FF6700;
+			}
+			
+			.shop-main .shop-select {
+				width: 606px;
+				margin: 30px 0;
+			}
+			
+			.shop-main .shop-select .choose-p {
+				line-height: 1;
+				font-size: 18px;
+				color: #333;
+			}
+			
+			.shop-main .shop-select .choose-list {
+				list-style-type: none;
+				margin-left: -6px;
+				width: 612px;
+				height: 119px;
+			}
+			
+			.shop-main .shop-select .choose-list .choose-item {
+				border: #ff6700 1px solid;
+				color: #ff6700;
+				margin-left: 6px;
+				margin-top: 15px;
+				width: 298px;
+				height: 42px;
+				font-size: 16px;
+				line-height: 42px;
+				overflow: hidden;
+				position: relative;
+				float: left;
+				transition: all .2s ease;
+			}
+			
+			.shop-main .shop-select .choose-list span {
+				display: block;
+				color: #333;
+				text-decoration: none;
+				line-height: 42px;
+				text-align: center;
+			}
+			
+			.shop-main .shop-select .choose-list span:hover {
+				color: #FF6700;
+			}
+			
+			.shop-main .shop-select .choose-list img {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				margin-right: 10px;
+				vertical-align: middle;
+				margin-top: -2px;
+			}
+			
+			.shop-main .selected {
+				background: #f9f9fa;
+				padding: 30px;
+				margin-bottom: 30px;
+			}
+			
+			.shop-main .selected ul {
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+			}
+			
+			.shop-main .selected ul li:first-child {
+				margin-top: 0;
+				line-height: 30px;
+				color: #616161;
+			}
+			
+			.shop-main .selected ul li:first-child span {
+				float: right;
+			}
+			
+			.totleprice {
+				color: #ff6700;
+				font-size: 24px;
+				padding-top: 20px;
+			}
+			
+			.btn-warp {
+				padding: 0;
+				margin: 10px 0 20px 0;
+				list-style-type: none;
+			}
+			
+			.btn-warp li {
+				display: inline-block;
+				margin-right: 10px;
+			}
+			
+			.btn-buy {
+				display: inline-block;
+				background: #ff6700;
+				border-color: #ff6700;
+				color: #fff;
+				width: 298px;
+				height: 52px;
+				text-align: center;
+				line-height: 52px;
+				font-size: 16px;
+			}
+			
+			.btn-like {
+				display: inline-block;
+				width: 140px;
+				height: 52px;
+				line-height: 52px;
+				padding: 0;
+				margin: 0;
+				border: 1px solid #b0b0b0;
+				text-align: center;
+				font-size: 16px;
+				position: relative;
+				background: #b0b0b0;
+				color: #fff;
+			}
+			
+			.bottom-foter {
+				width: 100%;
+				margin-top: 700px;
+			}
+			
+			.last-1 {
+				width: 100%;
+				height: 270px;
+				background-color: white;
+			}
+			
+			.last-1-main {
+				width: 80%;
+				height: 100%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.last-four {
+				padding: 27px 0px 0px 0px;
+				height: 50px;
+				width: 100%;
+				border-bottom: solid 1px #E0E0E0;
+			}
+			
+			.footer-servive {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.footer-servive li {
+				float: left;
+				width: 19.8%;
+				height: 25px;
+				font-size: 16px;
+				line-height: 25px;
+				text-align: center;
+				border-left: solid 1px #E0E0E0;
+			}
+			
+			.footer-servive .footer-servive-first {
+				border-left: none;
+			}
+			
+			.footer-servive a {
+				font-size: 16px;
+				color: #616161;
+			}
+			
+			.footer-servive a:hover {
+				color: #FF6700;
+			}
+			
+			.footer-servive .iconfont {
+				font-size: 24px;
+				margin-right: 6px;
+			}
+			
+			.footer-links {
+				padding: 40px 0;
+				height: 232px;
+			}
+			
+			.col-links {
+				float: left;
+				width: 160px;
+				height: 112px;
+				margin: 0;
+			}
+			
+			.col-links .col-dt {
+				margin-bottom: 20px;
+				color: #424242;
+				font-size: 14px;
+			}
+			
+			.col-links dd {
+				cursor: pointer;
+				font-size: 12px;
+				color: #757575;
+				margin-bottom: 7px;
+			}
+			
+			.col-links dd:hover {
+				color: #FF6700;
+			}
+			
+			.col-contact {
+				float: left;
+				width: 251px;
+				height: 112px;
+				border-left: 1px solid #E0E0E0;
+				text-align: center;
+				color: #616161;
+			}
+			
+			.col-contact .phone {
+				margin: 0 0 5px;
+				font-size: 22px;
+				line-height: 1;
+				color: #FF6700;
+			}
+			
+			.col-contact p {
+				margin: 0 0 16px;
+				font-size: 12px;
+			}
+			
+			.col-lianxi {
+				cursor: pointer;
+				width: 118px;
+				height: 28px;
+				font-size: 12px;
+				line-height: 28px;
+				color: #FF6700;
+				border-color: #FF6700;
+				background: white;
+				border: 1px solid #FF6700;
+				display: inline-block;
+			}
+			
+			.col-lianxi:hover {
+				color: white;
+				background: #FF6700;
+			}
+			
+			.last-2 {
+				width: 100%;
+				height: 190px;
+				background-color: #fafafa;
+			}
+			
+			.last-2-main {
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				height: 130px;
+				padding-top: 30px;
+			}
+			
+			.site-container {
+				height: 80px;
+				width: 100%;
+			}
+			
+			.logo-last {
+				float: left;
+				width: 57px;
+				height: 57px;
+				margin-right: 10px;
+				background: url(https://s01.mifile.cn/i/logo-footer.png?v2) no-repeat 50% 50%;
+			}
+			
+			.info-text {
+				width: 710px;
+				height: 70px;
+				float: left;
+				color: #B0B0B0;
+			}
+			
+			.info-text .sites {
+				margin: 0;
+				line-height: 18px;
+				font-size: 12px;
+			}
+			
+			.sites a {
+				color: #757575;
+			}
+			
+			.last-text {
+				line-height: 18px;
+				color: #B0B0B0;
+				font-size: 12px;
+			}
+			
+			.last-text a {
+				color: #b0b0b0;
+			}
+			
+			.info-text a {
+				cursor: pointer;
+			}
+			
+			.info-text a:hover {
+				color: #FF6700;
+			}
+			
+			.info-links {
+				float: right;
+				height: 28px;
+				margin: 4px 0 0;
+				font-size: 12px;
+			}
+			
+			.info-links img {
+				width: auto;
+				height: 28px;
+				margin-left: 0px;
+			}
+			
+			.slogan {
+				width: 300px;
+				height: 40px;
+				margin-left: 500px;
+				background-repeat: no-repeat;
+				background-image: url(../img/小米.png);
+				background-size: 260px 25px;
+				margin-top: 20px;
+				text-align: center;
+			}
+			
+			.info-text {
+				color: #757575;
+			}
+		</style>
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="topbar">
+			<div class="top-con">
+				<div class="right-list">
+					<a href="">小米商城</a>
+					<span>|</span>
+					<a href="">MIUI</a>
+					<span>|</span>
+					<a href="">IoT</a>
+					<span>|</span>
+					<a href="">云服务</a>
+					<span>|</span>
+					<a href="">金融</a>
+					<span>|</span>
+					<a href="">有品</a>
+					<span>|</span>
+					<a href="">小爱开放平台</a>
+					<span>|</span>
+					<a href="">政企服务</a>
+					<span>|</span>
+					<a id="downApp" href="">
+						下载app
+						<span id="downAdd" style="width: 124px;background-color: white;position: absolute;top: 40px;left: 40%;padding: 18px 0px 14px;margin-left: -75px;box-shadow: rgb(170, 170, 170) 0px 1px 5px;z-index: 100;display: none;">
+							<em style="width:0;height:0;border-width:0 10px 10px;border-style:solid;border-color:transparent transparent #fff;position:absolute;top:-10px;left:50px;"></em>
+							<img src="img/download.png"/>
+							<span>小米商城APP</span>
+						</span>
+					</a>
+					<span>|</span>
+					<a href="">Select Region</a>
+				</div>
+				<div class="shop-car">
+					<a id="shop-num" class="buy-car" href="">购物车(0)</a>
+					<div id="shop-list" class="shop-car-list" style="display: none;">
+						<div id="car-none" class="div" style="display: block;">购物车中还没有商品，赶紧选购吧！</div>
+						<ul id="car-list" class="shopcar-list" style="display: none;">
+							<li class="shopcar-item">
+								<div class="cart-item">
+									<a class="cart-pic" href="">
+										<img class="cart-img" src="img/pic-1.jpg" />
+									</a>
+									<a class="cart-shopname" href="">小米游戏本15.6”8代i5 8G 1T+256G 1050Ti 4G</a>
+									<span class="cart-price">6699元 × 1</span>
+									<a class="cart-delete" href="">x</a>
+								</div>
+							</li>
+						</ul>
+						<div id="car-price" class="cart-all" style="display: none;">
+							<span class="caart-text">
+									共<em id="many">1</em>件商品
+									<span class="text-price"><em id="realprice">6699</em>元</span>
+							</span>
+							<a class="btn-suan" href="">去购物车结算</a>
+						</div>
+					</div>
+				</div>
+				<div class="left-list">
+					<a href="">登录</a>
+					<span>|</span>
+					<a href="">注册</a>
+					<span>|</span>
+					<a href="">消息通知</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="top-sar">
+				<div class="container">
+					<div class="logo">
+						<a href=""></a>
+					</div>
+					<div class="hot">
+						<a href=""></a>
+					</div>
+					<div class="tar-list">
+						<ul id="ul-list">
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>小米手机</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>红米</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>电视</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>笔记本</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>空调</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>新品</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>路由器</span>
+								</a>
+							</li>
+							<li class="list-item DisBlock">
+								<a href="">
+									<span>智能硬件</span>
+								</a>
+							</li>
+							<li class="list-item">
+								<a href="">
+									<span>服务</span>
+								</a>
+							</li>
+							<li class="list-item">
+								<a href="">
+									<span>社区</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="search-box">
+						<form class="search-form" action="" method="get">
+							<input class="search-txt" type="search" name="keyword" />
+							<button class="search-btn" type="submit"></button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--<div class="clear"></div>-->
+			<div class="top-dis" id="topDis">
+				<div class="dis-content">
+					<ul id="disUl">
+						<li class="one"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<script src="二维码和mid.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			var oDoAp = document.getElementById('downApp');
+			var oDoAd = document.getElementById('downAdd');
+			oDoAp.addEventListener('mouseover', function() {
+				oDoAd.style.display = 'block';
+			})
+			oDoAp.addEventListener('mouseout', function() {
+				oDoAd.style.display = 'none';
+			})
+			var oDivTopdis = document.getElementById('topDis');
+			var oUl = document.getElementById('ul-list');
+			var oCell = oUl.getElementsByTagName('li');
+			var Condata = {
+				'Phone': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Redrice': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Tv': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Notbook': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Air': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Newthing': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Link': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				],
+				'Aithing': [{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'new': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'true'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					},
+					{
+						'img': 'img/imgcellphone.png',
+						'name': '小米MIX3',
+						'price': '3299元起',
+						'neww': 'false'
+					}
+				]
+			};
+			var InnerOli = function(i) {
+				oDivTopdis.style.display = 'block';
+				var oDul = document.getElementById('disUl');
+				oDul.innerHTML = '';
+				var con = '<li class="">' +
+					'<div class="pic">' +
+					'<a href="">' +
+					'<img src="' + '%&img&%' + '"/>' +
+					'</a>' +
+					'</div>' +
+					'<div class="title">' +
+					'<a href="">' + '%&name&%' + '</a>' +
+					'</div>' +
+					'<p>' + '%&price&%' + '</p>' +
+					'<div class="new new' + '%&true&%' + '">' +
+					'<div>新品</div>' +
+					'</div>' +
+					'</li>';
+				var cla = ''
+				switch(i) {
+					case 0:
+						cla = Condata.Phone
+						break;
+					case 1:
+						cla = Condata.Redrice
+						break;
+					case 2:
+						cla = Condata.Tv
+						break;
+					case 3:
+						cla = Condata.Notbook
+						break;
+					case 4:
+						cla = Condata.Air
+						break;
+					case 5:
+						cla = Condata.Newthing
+						break;
+					case 6:
+						cla = Condata.Link
+						break;
+					case 7:
+						cla = Condata.Aithing
+						break;
+				}
+				for(var j = 0; j < cla.length; j++) {
+					var cons = '';
+					cons = con.replace('%&img&%', cla[j].img);
+					cons = cons.replace('%&name&%', cla[j].name);
+					cons = cons.replace('%&price&%', cla[j].price);
+					cons = cons.replace('%&true&%', cla[j].neww);
+					oDul.innerHTML += cons;
+				}
+				$("#disUl li:first-child").addClass("one");
+			}
+			$("#ul-list li").mouseover(function() {
+				var index = $("#ul-list li").index(this);
+				InnerOli(index);
+			});
+			$("#ul-list li").mouseout(function() {
+				oDivTopdis.style.display = 'none';
+			});
+		</script>
+		<div class="mid-bar">
+			<div class="mid-con">
+				<h2>15.6寸游戏本 八代增强版</h2>
+				<div class="mid-left">
+					<span>|</span>
+					<a href="">Pro 15.6" GTX版</a>
+					<span>|</span>
+					<a href="">Air 13.3"四核增强版</a>
+				</div>
+				<div class="mid-right">
+					<a href="">概述</a>
+					<span>|</span>
+					<a href="">参数</a>
+					<span>|</span>
+					<a href="">F码通道</a>
+					<span>|</span>
+					<a href="">用户评价</a>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main-content">
+				<div class="lunbuo-box">
+					<ul class="img-list">
+						<li class="img-item active" style="background-image: url(img/pic-1.jpg);"></li>
+						<li class="img-item" style="background-image: url(img/pic-2.jpg);"></li>
+						<li class="img-item" style="background-image: url(img/pic-3.jpg);"></li>)
+					</ul>
+					<button class="btn prev" id="prev"><</button>
+					<button class="btn next" id="next">></button>
+					<div class="pointlist">
+						<div class="pointbox" data-index="0"></div>
+						<div class="pointbox" data-index="1"></div>
+						<div class="pointbox" data-index="2"></div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					var pic = document.getElementsByClassName('img-item');
+					var btnNext = document.getElementById('next');
+					var btnPrev = document.getElementById('prev');
+					var btnPoint = document.getElementsByClassName('pointbox');
+					var index = 0;
+					var time = 0;
+					var clearActive = function() {
+						for(var i = 0; i < pic.length; i++) {
+							pic[i].className = 'img-item'
+						}
+					}
+					var goIndex = function() {
+						clearActive();
+						pic[index].className = 'img-item active';
+					}
+					var goNext = function() {
+						if(index == 2) {
+							index = 0;
+						} else {
+							index++;
+						}
+						goIndex();
+					}
+					var goPrev = function() {
+						if(index == 0) {
+							index = 2;
+						} else {
+							index--;
+						}
+						goIndex();
+					}
+					btnNext.addEventListener('click', function() {
+						goNext();
+					});
+					btnPrev.addEventListener('click', function() {
+						goPrev();
+					});
+					for(var i = 0; i < btnPoint.length; i++) {
+						btnPoint[i].addEventListener('click', function() {
+							index = this.getAttribute('data-index');
+							goIndex();
+							time = 0;
+						})
+					}
+					setInterval(function() {
+						time++;
+						if(time == 5) {
+							goNext();
+							time = 0;
+						}
+					}, 400)
+				</script>
+				<div class="shop-box">
+					<h1 class="shop-tit">15.6寸游戏本 八代增强版</h1>
+					<p class="shop-ppp">第八代酷睿处理器 ／ 72%NTSC高色域窄边框全高清屏 ／ 256G PCIe高速固态 ／ 双烤不限频不降频</p>
+					<div class="shop-main">
+						<p class="company">小米自营</p>
+						<p class="shop-price">6699元</p>
+						<div class="shop-adds">
+							<div class="adds-con">
+								<div class="adds-itt"></div>
+								<div class="adds-ppp">
+									<div class="adds-more">
+										<span class="adds-item">黑龙江</span>
+										<span class="adds-item">哈尔滨市</span>
+										<span class="adds-item">南岗区</span>
+										<span class="adds-item">文化街道</span>
+									</div>
+									<span class="change">修改</span>
+									<div class="shop-sale">
+										<span>有现货</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="shop-select">
+							<div class="choose-p">
+								选择版本
+							</div>
+							<ul id="choose-list" class="choose-list">
+								<li class="choose-item" data-img = "img/pic-3.jpg" data-name="i5 8G 1T+256G 1050Ti 4G" data-price="6699">
+									<span>
+										<img src="img/pic-3.jpg" alt="" /> i5 8G 1T+256G 1050Ti 4G
+									</span>
+								</li>
+								<li class="choose-item" data-img = "img/pic-1.jpg" data-name="i7 16G 1T+256G 1060 6G" data-price="8999">
+									<span>
+										<img src="img/pic-1.jpg" alt="" /> i7 16G 1T+256G 1060 6G
+									</span>
+								</li>
+								<li class="choose-item" data-img = "img/pic-3.jpg" data-name="i7 8G 1T+256G 1050Ti 4G" data-price="7499">
+									<span>
+										<img src="img/pic-3.jpg" alt="" /> i7 8G 1T+256G 1050Ti 4G
+									</span>
+								</li>
+								<li class="choose-item" data-img = "img/pic-1.jpg" data-name="i5 8G 1T+256G 1060 6G" data-price="7999">
+									<span>
+										<img src="img/pic-1.jpg" alt="" /> i5 8G 1T+256G 1060 6G
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="selected">
+							<ul>
+								<li id="name&price">
+									小米游戏本15.6”8代i5 8G 1T+256G 1050Ti 4G
+									<span>6699 元 </span>
+								</li>
+								<li id="totleprice" class="totleprice">总计 ：6699元</li>
+							</ul>
+						</div>
+						<ul class="btn-warp">
+							<li id="btn-add">
+								<span class="btn-buy">加入购物车</span>
+							</li>
+							<li>
+								<span class="btn-like">💗喜欢 </span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var oLishop = document.getElementById('name&price');
+			var img='';
+			var name = '';
+			var price = '';
+			var nameprice = '小米游戏本15.6”8代&%name%&<span>&%price%&元 </span>';
+			var shopdata = [];
+			var sum=0;
+			$('#choose-list li').click(function() {
+				name = this.getAttribute('data-name');
+				price = this.getAttribute('data-price');
+				img=this.getAttribute('data-img');
+				var np = '';
+				np = nameprice.replace('&%name%&', name);
+				np = np.replace('&%price%&', price);
+				oLishop.innerHTML = '';
+				oLishop.innerHTML = np;
+				$('#totleprice').html('总计 ：' + price + '元');
+			});
+			$('#btn-add').click(function() {
+				if (name==''||price==''||img=='') {
+					alert('你还没有选择商品');
+					return;
+				} else{
+					var adddata={name:'小米游戏本15.6”8代'+name,price:price,img:img};
+					shopdata.unshift(adddata);
+					passNum();
+				}
+			});
+			var InnerOli = function() {
+				var oDul = document.getElementById('car-list');
+				oDul.innerHTML = '';
+				var con = '<li class="shopcar-item">'+
+								'<div class="cart-item">'+
+									'<a class="cart-pic" href="">'+
+										'<img class="cart-img" src="%&img&%" />'+
+									'</a>'+
+									'<a class="cart-shopname" href="">%&name&%</a>'+
+									'<span class="cart-price">%&price&%元 × 1</span>'+
+									'<a class="cart-delete" href="">x</a>'+
+								'</div>'+
+							'</li>';
+				for(var j = 0; j < shopdata.length; j++) {
+					var cons = '';
+					cons = con.replace('%&img&%', shopdata[j].img);
+					cons = cons.replace('%&name&%', shopdata[j].name);
+					cons = cons.replace('%&price&%', shopdata[j].price);
+					oDul.innerHTML += cons;
+				}
+				$("#disUl li:first-child").addClass("one");
+			}
+			var sumPrice=function () {
+				for (var i=0;i<shopdata.length;i++) {
+					var sprice=parseInt(shopdata[i].price);
+					sum+=sprice;
+				}
+			};
+			var passNum=function () {
+				var i=shopdata.length;
+				var a='购物车('+i+')';
+				$('#shop-num').html(a);
+			}
+			$('#shop-num').on('mouseover',function () {
+				isNone();
+				InnerOli();
+				sumPrice();
+				var i=shopdata.length;
+				$('#many').html(i);
+				$('#realprice').html(sum);
+			});
+			$('#shop-num').on('mouseout',function () {
+				$('#shop-list').css('display','none');
+				sum=0;
+			});
+			var isNone=function () {
+				$('#shop-list').css('display','block');
+				if (shopdata.length==0) {
+					$('#car-none').css('display','block');
+					$('#car-list').css('display','none');
+					$('#car-price').css('display','none');
+				} else{
+					$('#car-none').css('display','none');
+					$('#car-list').css('display','block');
+					$('#car-price').css('display','block');
+				}
+			}
+		</script>
+		<div class="bottom-foter">
+			<div class="last-1">
+				<div class="last-1-main">
+					<div class="last-four">
+						<ul class="footer-servive">
+							<li class="footer-servive-first">
+								<a href="">
+									<i class="iconfont icon-editor2"></i>预约维修服务</a>
+
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-7"></i>7天无理由退货</a>
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-15"></i>15天免费换货</a>
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-liwu"></i>满150包邮</a>
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-dizhi"></i>520余家售后网点</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-links">
+						<dl class="col-links">
+							<dt class="col-dt">帮助中心</dt>
+							<dd>账户管理</dd>
+							<dd>购物指南</dd>
+							<dd>订单操作</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">服务支持</dt>
+							<dd>售后政策</dd>
+							<dd>自助服务</dd>
+							<dd>相关下载</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">线下门店</dt>
+							<dd>小米之家</dd>
+							<dd>服务网点</dd>
+							<dd>授权体验店</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">关于小米</dt>
+							<dd>了解小米</dd>
+							<dd>加入小米</dd>
+							<dd>投资者关系</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">关注我们</dt>
+							<dd>新浪微博</dd>
+							<dd>官方微信</dd>
+							<dd>联系我们</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">特色服务</dt>
+							<dd>F码通道</dd>
+							<dd>礼物码</dd>
+							<dd>防伪查询</dd>
+						</dl>
+						<div class="col-contact">
+							<p class="phone">400-100-5678 </p>
+							<p>
+								周一至周日 8：00-18：00
+								<br> (仅收市话费)
+							</p>
+							<a href="" class="col-lianxi">
+								<i class="iconfont icon-xiaoxi"></i> 联系客服
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="last-2">
+				<div class="last-2-main">
+					<div class="site-container">
+						<div class="logo-last">
+
+						</div>
+						<div class="info-text">
+							<p class="sites">
+								<a href="">小米商城</a>
+								<span class="sep">|</span>
+								<a href="">MIUI</a>
+								<span class="sep">|</span>
+								<a href="">米家</a>
+								<span class="sep">|</span>
+								<a href="">米聊</a>
+								<span class="sep">|</span>
+								<a href="">多看</a>
+								<span class="sep">|</span>
+								<a href="">游戏</a>
+								<span class="sep">|</span>
+								<a href="">路由器</a>
+								<span class="sep">|</span>
+								<a href="">米粉卡</a>
+								<span class="sep">|</span>
+								<a href="">政企服务</a>
+								<span class="sep">|</span>
+								<a href="">小米天猫店</a>
+								<span class="sep">|</span>
+								<a href="">隐私政策</a>
+								<span class="sep">|</span>
+								<a href="">问题反馈</a>
+								<span class="sep">|</span>
+								<a href="">廉政举报</a>
+								<span class="sep">|</span>
+								<a href="">Select Region</a>
+
+							</p>
+							<p class="last-text">
+								©
+								<a href="">mi.com</a>京ICP证110507号
+								<a href="">京ICP备10046444号</a>
+								<a href="">京公网安备11010802020134号 </a>
+								<a href="">京网文[2017]1530-131号</a><br>
+								<a href="">（京）网械平台备字（2018）第00005号</a>
+								<a href="">互联网药品信息服务资格证 (京) -非经营性-2014-0090</a>
+								<a href="">营业执照</a>
+								<a href="">医疗器械公告</a>
+								<br> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+							</p>
+						</div>
+						<div class="info-links">
+							<a href="">
+								<img src="https://i1.mifile.cn/f/i/17/site/truste.png">
+							</a>
+							<a href="">
+								<img src="//s01.mifile.cn/i/v-logo-2.png">
+							</a>
+							<a href="">
+								<img src="https://s01.mifile.cn/i/v-logo-1.png">
+							</a>
+							<a href="">
+								<img src="https://s01.mifile.cn/i/v-logo-3.png">
+							</a>
+							<a href="">
+								<img src="https://i8.mifile.cn/b2c-mimall-media/ba10428a4f9495ac310fd0b5e0cf8370.png">
+							</a>
+						</div>
+					</div>
+					<div class="slogan">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
