@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="App2.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			#body {
+				width: 100%;
+				height: 1500px;
+			}
+			
+			#top {
+				width: 100%;
+				height: 100px;
+				border-bottom: 1px solid red;
+			}
+			
+			.top .container {
+				width: 1224px;
+				height: 74px;
+				padding: 0px;
+			}
+			
+			.container .logo {
+				width: 93px;
+				height: 48px;
+				margin-top: 26px;
+				float: left;
+			}
+			
+			.container .title {
+				width: 200px;
+				height: 48px;
+				margin-top: 26px;
+				float: left;
+			}
+			
+			.container .login {
+				width: 70px;
+				height: 40px;
+				margin-top: 30px;
+				float: left;
+				margin-left: 861px;
+				line-height: 40px;
+			}
+			
+			.cart {
+				width: 100%;
+				height: 400px;
+				background: #F5F5F5;
+			}
+			
+			.cart .container {
+				width: 1224px;
+				height: 400px;
+			}
+			
+			.part-line {
+				background: #F5F5F5;
+				width: 100%;
+				height: 92px;
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			
+			.part-line .container {
+				padding: 0px;
+				width: 1224px;
+				height: 32px;
+			}
+			
+			.part-line .container .left {
+				margin-top: 17px;
+				width: 466px;
+				height: 1px;
+				float: left;
+				background: black;
+			}
+			
+			.part-line .container .mid {
+				float: left;
+			}
+			
+			.part-line .container .mid span {
+				margin-top: 0px;
+				font-size: 26px;
+				margin: 0px 90px 0px 90px;
+			}
+			
+			.part-line .container .right {
+				margin-top: 17px;
+				width: 474px;
+				height: 1px;
+				float: left;
+				background: black;
+			}
+			
+			.show {
+				width: 100%;
+				height: 1280px;
+				background: #F5F5F5;
+			}
+			
+			.show .container {
+				width: 1224px;
+				height: 1242px;
+				padding: 0px;
+			}
+			
+			.show .container .container-ul {
+				width: 1224px;
+				height: 1300px;
+				padding: 0px;
+				list-style: none;
+			}
+			
+			.container-ul .show-list {
+				float: left;
+				background: white;
+				width: 234px;
+				height: 300px;
+				margin-bottom: 14px;
+				margin-right: 10px;
+			}
+			
+			.show-list .a1 {
+				display: inline-block;
+				width: 140px;
+				height: 140px;
+				margin-left: 47px;
+				margin-top: 40px;
+			}
+			
+			.show-list .a2 {
+				display: inline-block;
+				margin-left: 58px;
+				text-decoration: none;
+				margin-top: 20px;
+				color: black;
+			}
+			
+			.show-list span {
+				color: #FF6700;
+				display: block;
+				margin-top: 10px;
+				margin-left: 100px;
+			}
+			
+			.show-list .a3 {
+				margin-top: 10px;
+				margin-left: 88px;
+				display: inline-block;
+				color: black;
+			}
+			
+			.show-list .a4 {
+				color: #FF6700;
+				text-align: center;
+				line-height: 30px;
+				display: none;
+				width: 100px;
+				height: 30px;
+				border: 1px solid #FF6700;
+				margin-top: 10px;
+				margin-left: 70px;
+				transition: all .2s;
+			}
+			
+			.show-list .a4:hover {
+				background-color: #ff6700;
+				text-decoration: none;
+				color: white;
+			}
+			
+			.activee .a3{
+				display: none;
+			}
+			
+			.activee .a4{
+				display: inline-block;
+			}
+			
+			.commodity-service {
+				width: 1224px;
+				height: 272px;
+				margin: auto;
+			}
+			
+			.commodity-service .commodity-service-top {
+				height: 80px;
+				width: 1224px;
+				padding: 27px 0px 27px 0px;
+				border-bottom: 1px solid black;
+			}
+			
+			.commodity-service .commodity-service-top .commodity-service-top-ul {
+				height: 26px;
+				width: 1224px;
+				font-size: 18px;
+				margin: 0px;
+			}
+			
+			.commodity-service .commodity-service-top .commodity-service-top-li {
+				float: left;
+				list-style-type: none;
+				margin-left: 86px;
+				position: relative;
+			}
+			
+			.commodity-service .commodity-service-top .commodity-service-top-li a {
+				font-weight: 100;
+				color: black;
+			}
+			
+			.commodity-service .commodity-service-top .commodity-service-top-li a:hover {
+				color: red;
+			}
+			
+			.commodity-service .commodity-service-top .commodity-service-top-li .span {
+				position: absolute;
+				left: 163px;
+				top: -7px;
+			}
+			
+			.commodity-service .commodity-service-bottom {
+				width: 1224px;
+				height: 192px;
+				margin: auto;
+				padding: 40px 0px 40px 0px;
+			}
+			
+			.commodity-service-bottom .commodity-service-bottom-ul {
+				width: 160px;
+				height: 112px;
+				float: left;
+				list-style-type: none;
+			}
+			
+			.commodity-service-bottom .commodity-service-bottom-li a {
+				color: #312c26;
+			}
+			
+			.commodity-service-bottom .commodity-service-bottom-contact {
+				width: 250px;
+				height: 112px;
+				margin-left: 962px;
+				border-left: 1px solid black;
+			}
+			
+			.commodity-service-bottom .commodity-service-bottom-contact a {
+				display: inline-block;
+				color: orange;
+				border: 1px solid orange;
+				width: 90px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				margin-left: 73px;
+			}
+			
+			.commodity-service-bottom .commodity-service-bottom-contact a:hover {
+				color: white;
+				background: red;
+			}
+			
+			
+			.last-1 {
+				width: 100%;
+				height: 270px;
+				background-color: white;
+			}
+			
+			.last-1-main {
+				width: 80%;
+				height: 100%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.last-four {
+				padding: 27px 0px 0px 0px;
+				height: 50px;
+				width: 100%;
+				border-bottom: solid 1px #E0E0E0;
+			}
+			
+			.footer-servive {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.footer-servive li {
+				float: left;
+				width: 19.8%;
+				height: 25px;
+				font-size: 16px;
+				line-height: 25px;
+				text-align: center;
+				border-left: solid 1px #E0E0E0;
+			}
+			
+			.footer-servive .footer-servive-first {
+				border-left: none;
+			}
+			
+			.footer-servive a {
+				font-size: 16px;
+				color: #ff6700;
+			}
+			
+			.footer-servive a:hover {
+				color: #FF6700;
+			}
+			
+			.footer-servive .iconfont {
+				font-size: 24px;
+				margin-right: 6px;
+			}
+			
+			.footer-links {
+				padding: 40px 0;
+				height: 232px;
+			}
+			
+			.col-links {
+				float: left;
+				width: 160px;
+				height: 112px;
+				margin: 0;
+			}
+			
+			.col-links .col-dt {
+				margin-bottom: 20px;
+				color: #424242;
+				font-size: 14px;
+			}
+			
+			.col-links dd {
+				cursor: pointer;
+				font-size: 12px;
+				color: #757575;
+				margin-bottom: 7px;
+			}
+			
+			.col-links dd:hover {
+				color: #FF6700;
+			}
+			
+			.col-contact {
+				float: left;
+				width: 251px;
+				height: 112px;
+				border-left: 1px solid #E0E0E0;
+				text-align: center;
+				color: #616161;
+			}
+			
+			.col-contact .phone {
+				margin: 0 0 5px;
+				font-size: 22px;
+				line-height: 1;
+				color: #FF6700;
+			}
+			
+			.col-contact p {
+				margin: 0 0 16px;
+				font-size: 12px;
+			}
+			
+			.col-lianxi {
+				cursor: pointer;
+				width: 118px;
+				height: 28px;
+				font-size: 12px;
+				line-height: 28px;
+				color: #FF6700;
+				border-color: #FF6700;
+				background: white;
+				border: 1px solid #FF6700;
+				display: inline-block;
+			}
+			
+			.col-lianxi:hover {
+				color: white;
+				background: #FF6700;
+			}
+			
+			.last-2 {
+				width: 100%;
+				height: 190px;
+				background-color: #fafafa;
+			}
+			
+			.last-2-main {
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				height: 130px;
+				padding-top: 30px;
+			}
+			
+			.site-container {
+				height: 80px;
+				width: 100%;
+			}
+			
+			.logo-last {
+				float: left;
+				width: 57px;
+				height: 57px;
+				margin-right: 10px;
+				background: url(https://s01.mifile.cn/i/logo-footer.png?v2) no-repeat 50% 50%;
+			}
+			
+			.info-text {
+				width: 710px;
+				height: 70px;
+				float: left;
+				color: #B0B0B0;
+			}
+			
+			.info-text .sites {
+				margin: 0;
+				line-height: 18px;
+				font-size: 12px;
+			}
+			
+			.sites a {
+				color: #757575;
+			}
+			
+			.last-text {
+				line-height: 18px;
+				color: #B0B0B0;
+				font-size: 12px;
+			}
+			
+			.last-text a {
+				color: #b0b0b0;
+			}
+			
+			.info-text a {
+				cursor: pointer;
+			}
+			
+			.info-text a:hover {
+				color: #FF6700;
+			}
+			
+			.info-links {
+				float: right;
+				height: 28px;
+				margin: 4px 0 0;
+				font-size: 12px;
+			}
+			
+			.info-links img {
+				width: auto;
+				height: 28px;
+				margin-left: 0px;
+			}
+			
+			.slogan {
+				width: 300px;
+				height: 40px;
+				margin-left: 500px;
+				background-repeat: no-repeat;
+				background-image: url(../img/小米.png);
+				background-size: 260px 25px;
+				margin-top: 20px;
+				text-align: center;
+			}
+			
+			.info-text {
+				color: #757575;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="top" class="top">
+			<div id="container" class="container">
+				<div class="logo"><img style="width: 48px;height: 48px;" src="img/LOGO.png" /></div>
+				<div class="title">
+					<h2 style="margin-top: 7px;">我的购物车</h2></div>
+				<div class="login">
+					<a href="#">登录</a>
+					<span id="">|</span>
+					<a href="#">注册</a>
+				</div>
+			</div>
+		</div>
+		<div id="cart" class="cart">
+			<div id="" class="container">
+				<img style="margin-top: 64px;" src="img/cart-empty.png" />
+			</div>
+
+		</div>
+		<div id="part-line" class="part-line">
+			<div class="container">
+				<div class="left"></div>
+				<div class="mid"><span>为您推荐</span></div>
+				<div class="right"></div>
+			</div>
+
+		</div>
+		<div id="show" class="show">
+			<div id="container" class="container">
+				<ul class="container-ul" id="show-form">
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+					<li class="show-list" id="show-list">
+						<a class="a1" href="#"><img style="width: 140px;height: 140px;" src="img/show.jpg" /></a>
+						<a class="a2" href="#">小米手环3 NFC版 </a>
+						<span id="">199元</span>
+						<a id="a3" class="a3" href="#">6673好评</a>
+						<a id="a4" class="a4" href="#">加入购物车</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="bottoms">
+			<div class="last-1">
+				<div class="last-1-main">
+					<div class="last-four">
+						<ul class="footer-servive">
+							<li class="footer-servive-first">
+								<a href="">
+									<i class="iconfont icon-editor2"></i>预约维修服务</a>
+
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-7"></i>7天无理由退货</a>
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-15"></i>15天免费换货</a>
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-liwu"></i>满150包邮</a>
+							</li>
+							<li>
+								<a href="" class="">
+									<i class="iconfont icon-dizhi"></i>520余家售后网点</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-links">
+						<dl class="col-links">
+							<dt class="col-dt">帮助中心</dt>
+							<dd>账户管理</dd>
+							<dd>购物指南</dd>
+							<dd>订单操作</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">服务支持</dt>
+							<dd>售后政策</dd>
+							<dd>自助服务</dd>
+							<dd>相关下载</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">线下门店</dt>
+							<dd>小米之家</dd>
+							<dd>服务网点</dd>
+							<dd>授权体验店</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">关于小米</dt>
+							<dd>了解小米</dd>
+							<dd>加入小米</dd>
+							<dd>投资者关系</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">关注我们</dt>
+							<dd>新浪微博</dd>
+							<dd>官方微信</dd>
+							<dd>联系我们</dd>
+						</dl>
+						<dl class="col-links">
+							<dt class="col-dt">特色服务</dt>
+							<dd>F码通道</dd>
+							<dd>礼物码</dd>
+							<dd>防伪查询</dd>
+						</dl>
+						<div class="col-contact">
+							<p class="phone">400-100-5678 </p>
+							<p>
+								周一至周日 8：00-18：00
+								<br> (仅收市话费)
+							</p>
+							<a href="" class="col-lianxi">
+								<i class="iconfont icon-xiaoxi"></i> 联系客服
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="last-2">
+				<div class="last-2-main">
+					<div class="site-container">
+						<div class="logo-last">
+
+						</div>
+						<div class="info-text">
+							<p class="sites">
+								<a href="">小米商城</a>
+								<span class="sep">|</span>
+								<a href="">MIUI</a>
+								<span class="sep">|</span>
+								<a href="">米家</a>
+								<span class="sep">|</span>
+								<a href="">米聊</a>
+								<span class="sep">|</span>
+								<a href="">多看</a>
+								<span class="sep">|</span>
+								<a href="">游戏</a>
+								<span class="sep">|</span>
+								<a href="">路由器</a>
+								<span class="sep">|</span>
+								<a href="">米粉卡</a>
+								<span class="sep">|</span>
+								<a href="">政企服务</a>
+								<span class="sep">|</span>
+								<a href="">小米天猫店</a>
+								<span class="sep">|</span>
+								<a href="">隐私政策</a>
+								<span class="sep">|</span>
+								<a href="">问题反馈</a>
+								<span class="sep">|</span>
+								<a href="">廉政举报</a>
+								<span class="sep">|</span>
+								<a href="">Select Region</a>
+
+							</p>
+							<p class="last-text">
+								©
+								<a href="">mi.com</a>京ICP证110507号
+								<a href="">京ICP备10046444号</a>
+								<a href="">京公网安备11010802020134号 </a>
+								<a href="">京网文[2017]1530-131号</a><br>
+								<a href="">（京）网械平台备字（2018）第00005号</a>
+								<a href="">互联网药品信息服务资格证 (京) -非经营性-2014-0090</a>
+								<a href="">营业执照</a>
+								<a href="">医疗器械公告</a>
+								<br> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+							</p>
+						</div>
+						<div class="info-links">
+							<a href="">
+								<img src="https://i1.mifile.cn/f/i/17/site/truste.png">
+							</a>
+							<a href="">
+								<img src="//s01.mifile.cn/i/v-logo-2.png">
+							</a>
+							<a href="">
+								<img src="https://s01.mifile.cn/i/v-logo-1.png">
+							</a>
+							<a href="">
+								<img src="https://s01.mifile.cn/i/v-logo-3.png">
+							</a>
+							<a href="">
+								<img src="https://i8.mifile.cn/b2c-mimall-media/ba10428a4f9495ac310fd0b5e0cf8370.png">
+							</a>
+						</div>
+					</div>
+					<div class="slogan">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.show-list').on('mouseover',function () {
+				$(this).addClass("activee");
+			});
+			$('.show-list').on('mouseout',function () {
+				$(this).removeClass("activee");
+			});
+		</script>
+	</body>
+
+</html>
