@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="xiexiangshangjiantou" unicode="&#58948;" d="M27.416898-2.183483l732.465108 732.465108L256.378495 683.641299a61.480429 61.480429 0 0 0-69.960488 66.780466 89.040621 89.040621 0 0 0 78.440547 78.440547L954.923366 895.642778a64.660451 64.660451 0 0 0 51.940362-18.020126 67.840473 67.840473 0 0 0 18.020125-51.940362L954.923366 136.677486a78.440547 78.440547 0 0 0-25.440178-53.00037 83.740584 83.740584 0 0 0-55.120384-25.440177 62.540436 62.540436 0 0 0-66.780466 69.960487l49.820348 503.503511-731.4051-731.4051a75.260525 75.260525 0 0 0-106.000739-11.660081 75.260525 75.260525 0 0 0 7.420051 109.180761z"  horiz-adv-x="1027" />
+
+    
+
+
+  </font>
+</defs></svg>
